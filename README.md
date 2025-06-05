@@ -27,12 +27,14 @@ Projet Java Web réalisé dans le cadre d’un TP de développement d’applicat
 
 ## ✨ Fonctionnalités
 
+
 - Ajouter un livre
 - Afficher les livres
 - (Suppression/édition en bonus ?)
 
 ---
 
-## 🤓 Auteur
+## Capture d'écran de l'app:
 
-Cécile ✨
+![Capture d'écran 2025-06-05 170438](https://github.com/user-attachments/assets/697c5dd8-6962-4487-9679-cddb163e5385)
+![Capture d'écran 2025-06-05 170513](https://github.com/user-attachments/assets/5108b512-0796-4d04-86f8-5b4707a6e0c9)
