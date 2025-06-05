@@ -1,0 +1,20 @@
+# === MAVEN ===
+/target/
+*.war
+*.jar
+*.class
+
+# === IDÉE ===
+*.iml
+*.log
+*.DS_Store
+*.classpath
+*.project
+*.settings/
+.idea/
+.vscode/
+
+# === Système ===
+Thumbs.db
+desktop.ini
+

@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
+  <!-- Version du modèle Maven utilisé (obligatoire) -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Identifiant du groupe (souvent structure du package Java) -->
+  <groupId>com.example</groupId>
+
+  <!-- Nom du projet, unique dans le groupe -->
+  <artifactId>LibraryManager</artifactId>
+
+  <!-- Type de packaging : 'jar' par défaut, ici on veut une application web (.war) -->
+  <packaging>war</packaging>
+
+  <!-- Version actuelle du projet (utile pour les mises à jour/déploiements) -->
+  <version>1.0-SNAPSHOT</version>
+
+  <!-- Nom lisible du projet -->
+  <name>LibraryManager Maven Webapp</name>
+
+  <!-- URL du site du projet (souvent ignoré ou fictif pour les projets locaux) -->
+  <url>http://maven.apache.org</url>
+
+  <!-- Dépendances nécessaires au projet -->
+  <dependencies>
+
+    <!-- Bibliothèque de test JUnit (version ancienne ici) -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope> <!-- Utilisée uniquement pour les tests -->
+    </dependency>
+
+    <!-- API Servlet de Jakarta (nécessaire pour utiliser les Servlets) -->
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>5.0.0</version>
+      <scope>provided</scope> <!-- Fournie par Tomcat, pas incluse dans le .war -->
+    </dependency>
+
+    <!-- Pilote JDBC pour SQLite (pour interagir avec une base SQLite) -->
+  <dependency>
+  <groupId>org.xerial</groupId>
+  <artifactId>sqlite-jdbc</artifactId>
+  <version>3.42.0.0</version> <!-- ou autre version que tu utilises -->
+</dependency>
+
+
+  </dependencies>
+
+  <build>
+    <!-- Nom final du fichier .war généré dans /target -->
+    <finalName>LibraryManager</finalName>
+
+      <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-shade-plugin</artifactId>
+      <version>3.2.4</version>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>shade</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+  
+  </build>
+</project>
